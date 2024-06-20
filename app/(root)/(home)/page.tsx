@@ -1,8 +1,7 @@
 import { Hero } from "@/components/appcomponent/Home/Hero-section/Hero";
 import { Cards } from "@/components/appcomponent/Home/cards/Cards";
 import { MeetingList } from "@/components/appcomponent/Home/upcoming-meetings/MeetingList";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+
 
 export default function Home() {
   return (

@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+
 import { MeetingCard } from "./MeetingCard/MeetingCard";
 
 export const MeetingList = () => {
@@ -16,8 +15,40 @@ export const MeetingList = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <MeetingCard />
-        <MeetingCard />
+        <MeetingCard
+          buttonStats={true}
+          date="March 15, 2024"
+          time="10:00 AM"
+          mainTitle="Team Sync: Sprint Planning & Updates"
+          iconpath="/icons/previous.svg"
+          users={{
+            images: [
+              "/images/avatar-1.jpeg",
+              "/images/avatar-2.jpeg",
+              "/images/avatar-3.png",
+              "/images/avatar-4.png",
+              "/images/avatar-5.png",
+            ],
+            remainNumber: 9,
+          }}
+        />
+        <MeetingCard
+          buttonStats={true}
+          date="March 15, 2024"
+          time="10:00 AM"
+          mainTitle="Team Sync: Sprint Planning & Updates"
+          iconpath="/icons/previous.svg"
+          users={{
+            images: [
+              "/images/avatar-1.jpeg",
+              "/images/avatar-2.jpeg",
+              "/images/avatar-3.png",
+              "/images/avatar-4.png",
+              "/images/avatar-5.png",
+            ],
+            remainNumber: 9,
+          }}
+        />
       </div>
     </div>
   );
