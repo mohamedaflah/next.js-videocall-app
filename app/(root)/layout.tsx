@@ -1,3 +1,4 @@
+import StreamVideoProvider from "@/providers/StreamClientProvider";
 import { ClerkProvider } from "@clerk/nextjs";
 
 export default function HomeLayout({
@@ -5,5 +6,9 @@ export default function HomeLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main className="bg-dark-2">{children}</main>;
+  return (
+    <main className="bg-dark-2">
+      <StreamVideoProvider>{children}</StreamVideoProvider>
+    </main>
+  );
 }

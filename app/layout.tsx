@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Kumbh_Sans, Roboto } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,10 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ClerkProvider >
+      <ClerkProvider>
         <body
           className={`${kumbhSans.className} ${roboto.className} bg-dark-2 `}
         >
+          <Toaster position="top-center" />
           {children}
         </body>
       </ClerkProvider>
