@@ -7,7 +7,7 @@ export const Hero = () => {
       <div className="flex flex-col gap-2">
         <div className="flex items-end gap-2 ">
           <div>
-            <h1 className="text-7xl font-bold">12:05</h1>
+            <h1 className="md:text-7xl text-6xl font-bold">12:05</h1>
           </div>
           <span className="mb-2 font-medium">PM</span>
         </div>
