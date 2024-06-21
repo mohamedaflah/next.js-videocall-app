@@ -17,8 +17,8 @@ export default function SideBar() {
               path == link.path && "bg-blueCol"
             } rounded-md text-lightText`}
           >
-            <Image width={20} height={20} src={link.image} alt={link.label} />
-            <span>{link.label}</span>
+            <Image width={20} height={20} src={link.image} alt={link.label}  />
+            <span className="hidden sm:block">{link.label}</span>
           </Link>
         ))}
       </div>

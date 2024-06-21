@@ -1,3 +1,4 @@
+"use client";
 import {
   Sheet,
   SheetClose,
@@ -5,10 +6,13 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { NavLinksConstant } from "@/constants/navLinks";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function NavBar() {
+  const pathname = usePathname();
   return (
     <header className="sticky top-0 left-0 h-20 flex items-center pl-7 pr-10 z-20  justify-between bg-dark-1">
       <div className="flex gap-2">
@@ -47,9 +51,23 @@ export default function NavBar() {
                   </SheetClose>
                 </div>
                 <div className="w-full mt-5 flex flex-col gap-4">
-                  {NavLinksConstant.map(link=>(
-                    <Link href={link.path} className="h-10 bg-dark-2 px-3 flex items-center text-white rounded-lg py-2 gap-3" key={link.id}>
-                      <Image width={18} height={18} src={link.image} alt={link.label}/>
+                  {NavLinksConstant.map((link) => (
+                    <Link
+                      href={link.path}
+                      className={cn(
+                        "h-10 bg-dark-2 px-3 flex items-center text-white rounded-lg py-2 gap-3",
+                        {
+                          "bg-blueCol": pathname==link.path,
+                        }
+                      )}
+                      key={link.id}
+                    >
+                      <Image
+                        width={18}
+                        height={18}
+                        src={link.image}
+                        alt={link.label}
+                      />
                       <span>{link.label}</span>
                     </Link>
                   ))}

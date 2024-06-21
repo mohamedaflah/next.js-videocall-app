@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Cards = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
       <div className="rounded-2xl h-64 bg-sporange text-white p-6 flex flex-col justify-between">
         <div className="w-full flex">
           <div className="p-2 bg-white/25 rounded-lg size-10">
