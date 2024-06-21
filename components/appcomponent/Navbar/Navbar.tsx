@@ -2,13 +2,11 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { NavLinksConstant } from "@/constants/navLinks";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function NavBar() {
   return (
@@ -50,10 +48,10 @@ export default function NavBar() {
                 </div>
                 <div className="w-full mt-5 flex flex-col gap-4">
                   {NavLinksConstant.map(link=>(
-                    <div className="h-10 bg-dark-2 px-3 flex items-center text-white rounded-lg py-2 gap-3" key={link.id}>
+                    <Link href={link.path} className="h-10 bg-dark-2 px-3 flex items-center text-white rounded-lg py-2 gap-3" key={link.id}>
                       <Image width={18} height={18} src={link.image} alt={link.label}/>
                       <span>{link.label}</span>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </div>

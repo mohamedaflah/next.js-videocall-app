@@ -5,14 +5,14 @@ import Image from "next/image";
 export default function Personal() {
   return (
     <main className="w-full h-full  text-white ">
-      <div className=" py-12  px-12 flex flex-col gap-8">
+      <div className=" py-12  px-12 flex flex-col gap-8 border-b-4 border-b-dark-1">
         <div className="w-full ">
           <div>
             <span className="font-medium text-2xl">Personal Meeting Room</span>
           </div>
         </div>
         <div className="flex flex-col gap-5">
-          <div className="h-10 flex items-center text-[17px]">
+          <div className="min-h-10 flex items-center text-[17px]">
             <div className="w-36 h-full text-fontHighlite flex items-center  ">
               Topic:
             </div>
@@ -20,7 +20,7 @@ export default function Personal() {
               <span>aflah`s Meeting room</span>
             </div>
           </div>
-          <div className="h-10 flex items-center text-[17px]">
+          <div className="min-h-10 flex items-center text-[17px]">
             <div className="w-36 h-full text-fontHighlite flex items-center  ">
               Meeting ID:
             </div>
@@ -28,7 +28,7 @@ export default function Personal() {
               <span>324 531 3821</span>
             </div>
           </div>
-          <div className="h-10 flex items-center text-[17px]">
+          <div className="min-h-10 flex items-center text-[17px]">
             <div className="w-36 h-full text-fontHighlite flex items-center  ">
               Passcode:
             </div>
@@ -39,7 +39,7 @@ export default function Personal() {
               </button>
             </div>
           </div>
-          <div className="h-10 flex items-center text-[17px]">
+          <div className="min-h-10 flex items-center text-[17px]">
             <div className="w-36 h-full text-fontHighlite flex items-center  ">
               Invite Link:
             </div>
@@ -50,7 +50,7 @@ export default function Personal() {
             </div>
           </div>
         </div>
-        <div className="w-full flex gap-2 h-10">
+        <div className="w-full flex gap-2 h-10 flex-wrap">
           <Button className="bg-blueCol hover:bg-blueCol rounded-sm">
             Start the meeting
           </Button>
@@ -59,14 +59,25 @@ export default function Personal() {
             <span>Copy Invitation</span>
           </Button>
           <Button className="gap-3 bg-transparent hover:bg-transparent border-2 border-dark-3">
-            <Image src={"/icons/copy.svg"} width={16} height={16} alt="copy" />
+            <Image src={"/icons/Edit.svg"} width={16} height={16} alt="copy" />
             Edit
           </Button>
           <Button className="gap-3 bg-transparent hover:bg-transparent border-2 border-dark-3">
-            <Image src={"/icons/copy.svg"} width={16} height={16} alt="copy" />
+            <Image
+              src={"/icons/Delete.svg"}
+              width={16}
+              height={16}
+              alt="copy"
+            />
             Delete
           </Button>
         </div>
+      </div>
+      <div className="py-12  px-12">
+        <Button className="flex gap-3 hover:bg-dark-3 bg-dark-3 rounded-sm">
+          <Image src={"/icons/add-meeting.svg"} width={13} height={13} alt="copy" />
+          <span>Create a new Room</span>
+        </Button>
       </div>
     </main>
   );
