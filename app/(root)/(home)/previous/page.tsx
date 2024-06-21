@@ -2,12 +2,12 @@
 import { MeetingCard } from "@/components/appcomponent/Home/upcoming-meetings/MeetingCard/MeetingCard";
 
 
-export default function Upcoming() {
+export default function Previous() {
   return (
     <main className="w-full h-full  pt-12 px-12 flex flex-col gap-8 text-white ">
       <div className="w-full">
         <div>
-          <span className="font-medium text-2xl">Upcoming Meetings</span>
+          <span className="font-medium text-2xl">Previous Meetings</span>
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
