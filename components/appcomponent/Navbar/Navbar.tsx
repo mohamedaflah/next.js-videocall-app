@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/sheet";
 import { NavLinksConstant } from "@/constants/navLinks";
 import { cn } from "@/lib/utils";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -57,7 +58,7 @@ export default function NavBar() {
                       className={cn(
                         "h-10 bg-dark-2 px-3 flex items-center text-white rounded-lg py-2 gap-3",
                         {
-                          "bg-blueCol": pathname==link.path,
+                          "bg-blueCol": pathname == link.path,
                         }
                       )}
                       key={link.id}
@@ -83,15 +84,15 @@ export default function NavBar() {
           alt={"Logo"}
         />
       </div>
-      <div className="rounded-full p-1 border border-dark-2 cursor-pointer">
-        <Image
-          src={"/images/avatar-1.jpeg"}
-          width={40}
-          height={40}
-          className="rounded-full"
-          alt="User"
-        />
+      <div>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
+
     </header>
   );
 }
