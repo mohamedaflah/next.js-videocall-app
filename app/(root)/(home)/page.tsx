@@ -5,7 +5,7 @@ import { MeetingList } from "@/components/appcomponent/Home/upcoming-meetings/Me
 
 export default function Home() {
   return (
-    <main className="w-full h-full  pt-12 px-12 flex flex-col gap-8 text-white ">
+    <main className="w-full h-full  py-12 px-12 flex flex-col gap-8 text-white ">
       <Hero />
       <Cards />
       <MeetingList />

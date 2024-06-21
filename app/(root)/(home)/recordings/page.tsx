@@ -2,7 +2,7 @@ import { MeetRecordCard } from "@/components/appcomponent/Home/recordings/Meetin
 
 export default function Recording() {
   return (
-    <main className="w-full h-full  pt-12 px-12 flex flex-col gap-8 text-white ">
+    <main className="w-full h-full  py-12 px-12 flex flex-col gap-8 text-white ">
       <div className="w-full">
         <div>
           <span className="font-medium text-2xl">Meeting Recordings</span>
